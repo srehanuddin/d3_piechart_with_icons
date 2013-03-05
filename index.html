@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>D3 Piechart with Image Icon</title>
+
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    
+	<!-- LIBS -->
+	<script type="text/javascript" src="js/d3.v3.min.js"></script>
+    <script type="text/javascript" src="js/layout.js"></script>
+    <script type="text/javascript" src="js/jquery-1.8.2-win8-1.0.min.js"></script>
+    <!-- /LIBS -->
+    
+    <script type="text/javascript" src="js/piechart_module.js"></script>
+ 
+ 
+<script>
+					
+	var data = 	[
+					{"label":"PHP", "value":20, "icon":'php.png'},
+					{"label":"Java Script", "value":50, "icon":'Javascript.png'}, 
+					{"label":"Java", "value":30, "icon":'java.png'},
+					{"label":"C++", "value":30, "icon":'file_c++.png'},
+					{"label":"C#", "value":30, "icon":'file_c.png'},
+					{"label":"ASP", "value":30, "icon":'file_ASP.png'},
+					{"label":"Ruby", "value":30, "icon":'application-x-ruby.png'},
+					{"label":"Python", "value":30, "icon":'source_py.png'}
+				];	
+	
+	var params = 	{
+						elementId : 'pieChart', //Where Create Pie Chart
+						imagePath : 'images/',	//Path to Icon Images
+						radius:200,				//Height of Pie = Radius * 2
+					};
+
+	$(document).ready(function(e) {
+        var pie1 = new pieChart(params,data);
+    });
+	
+
+</script> 
+    
+</head>
+
+<body>
+
+
+<div id="header">Demo D3 Customize Pie Chart</div>
+<div id='pieChart'>Error In Creating Pie Chart.</div>
+
+</body>
+</html>
